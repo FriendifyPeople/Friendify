@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<title>Grp1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+     /*    dropdown towards left*/
+
+    .drop-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    
+    
+    body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.hero-image {
+  background-image: url("w1.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+</style>
+<body class="w3-theme-l5">
+
+
+ <!-- Navbar -->
+    <nav style="z-index: 3">
+        <div class="w3-top">
+
+            <div class="w3-bar w3-theme-d2 w3-left-align">
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+                <a href="home%20(2).html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Friendify</a>
+                <a href="sudeep.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
+
+                <div class="w3-dropdown-hover w3-hide-small" style="z-index: 3">
+                    <button class="w3-button" title="Notifications">Friends <i class="fa fa-caret-down"></i></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="z-index: 3">
+                        <a href="Soumya.html" class="w3-bar-item w3-button">Soumyabrata Majumder</a>
+                        <a href="Mannu.html" class="w3-bar-item w3-button">Mannu Sharma</a>
+                        <a href="Sachin.html" class="w3-bar-item w3-button">Sachin Baghel</a>
+                    </div>
+                </div>
+                <div class="w3-dropdown-hover w3-hide-small" style="z-index: 3">
+                    <button class="w3-button" title="Notifications">Notification<span class="w3-badge w3-right w3-small w3-teal">3</span></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="z-index: 3">
+                        <a href="#" class="w3-bar-item w3-button">New Friend request</a>
+                        <a href="#" class="w3-bar-item w3-button">Mannu liked your status</a>
+                        <a href="#" class="w3-bar-item w3-button">Sachin commented on your photo</a>
+                    </div>
+                </div>
+
+
+                <div class="w3-dropdown-hover w3-hide-small " style="float: right;">
+                    <button class="w3-button" title="Notifications"><i class="fa fa-cog"></i></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block drop-content">
+                        <a href="our.html" class="w3-bar-item w3-button">About us</a>
+                        <a href="#" class="w3-bar-item w3-button">Logout</a>
+                    </div>
+                </div>
+                <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>-->
+            </div>
+        </div>
+
+    </nav>
+    <!--end of nav bar-->
+    
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">GLB Official</h1>
+    <p>The group for g-link sharing</p>
+  </div>
+</div>
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+     <p></p>
+      </div>
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+    
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+              <h6 class="w3-opacity">Friendify</h6>
+              <p contenteditable="true" class="w3-border w3-padding">Status</p>
+              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="msk1.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">1 min</span>
+        <h4>Mannu Sharma</h4><br>
+        <hr class="w3-clear">
+        <p>Must watch this movie... #batman</p>
+          <div class="w3-row-padding" style="margin:0 -16px">
+            <div class="w3-half">
+              <img src="g1.jpg" onclick="document.getElementById('id01').style.display='block'" style="width:100%;height: inherit" alt="pic 1" class="w3-margin-bottom">
+            </div>
+              <div id="id01" class="w3-modal">
+                <div class="w3-modal-content w3-card-4"> 
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-btn w3-display-topright">&times;</span>
+                    <img src="g1.jpg" class="w3-card" style="width: 100%"/>
+                  </div>
+              </div>
+            <div class="w3-half">
+              <img src="g2.jpg" onclick="document.getElementById('id02').style.display='block'" style="width:100%;height: inherit" alt="pic 2" class="w3-margin-bottom">
+            </div>
+              <div id="id02" class="w3-modal">
+                <div class="w3-modal-content w3-card-4"> 
+                    <span onclick="document.getElementById('id02').style.display='none'" class="w3-btn w3-display-topright">&times;</span>
+                    <img src="g2.jpg"x class="w3-card" style="width: 100%"/>
+                  </div>
+              </div>
+        </div>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div>
+      
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="sb1.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px;height:60px">
+        <span class="w3-right w3-opacity">16 min</span>
+        <h4>Sachin Baghel</h4><br>
+        <hr class="w3-clear">
+        <p>NEED HELP.... LINK TO DOWNLOAD SHAPE OF WATER MOVIE..</p>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div>  
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="sm1.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px;height:60px">
+        <span class="w3-right w3-opacity">32 min</span>
+        <h4>Soumyabrata Majumder</h4><br>
+        <hr class="w3-clear">
+        <p>This new Background is Lit.....</p>
+        <div class="w3-card">
+              <img src="w1.jpg" onclick="document.getElementById('id03').style.display='block'" style="width:100%;height: inherit" alt="pic 3" class="w3-margin-bottom">
+            </div>
+              <div id="id03" class="w3-modal">
+                <div class="w3-modal-content w3-card-4"> 
+                    <span onclick="document.getElementById('id03').style.display='none'" class="w3-btn w3-display-topright">&times;</span>
+                    <img src="w1.jpg" class="w3-card" style="width: 100%"/>
+                  </div>
+              </div>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+      </div> 
+      
+    <!-- End Middle Column -->
+    </div>
+    
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer 
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>Footer</h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+ -->
+<script>
+// Accordion
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-d1";
+    } else { 
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+    }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html> 

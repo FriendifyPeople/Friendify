@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<title>Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
+    
+     /*    dropdown towards left*/
+
+    .drop-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+/*    end*/
+    
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+
+<body class="w3-theme-l5">
+
+
+ <!-- Navbar -->
+    <nav style="z-index: 3">
+        <div class="w3-top">
+
+            <div class="w3-bar w3-theme-d2 w3-left-align">
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+                <a href="home%20(2).html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Friendify</a>
+                <a href="sudeep.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
+
+                <div class="w3-dropdown-hover w3-hide-small" style="z-index: 3">
+                    <button class="w3-button" title="Notifications">Friends <i class="fa fa-caret-down"></i></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="z-index: 3">
+                        <a href="Soumya.html" class="w3-bar-item w3-button">Soumyabrata Majumder</a>
+                        <a href="Mannu.html" class="w3-bar-item w3-button">Mannu Sharma</a>
+                        <a href="Sachin.html" class="w3-bar-item w3-button">Sachin Baghel</a>
+                    </div>
+                </div>
+                <div class="w3-dropdown-hover w3-hide-small" style="z-index: 3">
+                    <button class="w3-button" title="Notifications">Notification<span class="w3-badge w3-right w3-small w3-teal">3</span></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="z-index: 3">
+                        <a href="#" class="w3-bar-item w3-button">New Friend request</a>
+                        <a href="#" class="w3-bar-item w3-button">Mannu liked your status</a>
+                        <a href="#" class="w3-bar-item w3-button">Sachin commented on your photo</a>
+                    </div>
+                </div>
+
+
+                <div class="w3-dropdown-hover w3-hide-small " style="float: right;">
+                    <button class="w3-button" title="Notifications"><i class="fa fa-cog"></i></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block drop-content">
+                        <a href="our.html" class="w3-bar-item w3-button">About us</a>
+                        <a href="#" class="w3-bar-item w3-button">Logout</a>
+                    </div>
+                </div>
+                <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>-->
+            </div>
+        </div>
+
+    </nav>
+    <!--end of nav bar-->
+
+
+    <!-- End Middle Column -->
+    
+    
+    <!-- Right Column -->
+    
+      <br>
+
+  
+  
+<h2>Meet the fantastic four</h2>
+<p>The team that created history.</p>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="ava.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Sudeep Kumar Sahoo</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Leader and innovative.</p>
+        <p>skswar@gamil.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="msk1.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Mannu Sharma</h2>
+        <p class="title">Co-founder</p>
+        <p>Helpful and Hardworking.</p>
+        <p>msk7@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="sm1.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h3>Soumyabrata Majumder</h3>
+        <p class="title">Director</p>
+        <p>Optimtstic and a beliver.</p>
+        <p>smajumder@outlook.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+	  </div>
+      </div>
+	 <div class="column">
+    <div class="card">
+      <img src="sb1.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Sachin Baghel</h2> 
+        <p class="title">The 1st Intern and marketing head</p>
+        <p>Quick learner and adventerous.</p>
+        <p>sachin.baghel1234@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+<!-- End Page Container -->
+<br>
+
+<script>
+// Accordion
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-d1";
+    } else { 
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+    }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html> 

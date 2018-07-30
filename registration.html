@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>
+            Registration Form
+        </title>
+        <script>
+            function numbersonly(e)
+            {
+                var unicode=e.charCode? e.charCode : e.keyCode
+                if(unicode!=8)
+                    {
+                        if(unicode<48 || unicode>57)
+                            {
+                                return false;
+                            }
+                        else{
+                            return true;
+                        }
+                    }
+            }
+        </script>
+    </head>
+    <style>
+        body{
+            background-color: darkgrey;
+        }
+    </style>
+    <body>
+       <h1 align="center">
+           <U><B>REGISTRATION FORM</B></U>
+       </h1>
+        <form name="frmregister">
+            <table border="1" bgcolor="aqua" align="center" cellpadding="50">
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" 
+                               id="txtusername"
+                               name="username"
+                               required
+                               placeholder="enter username"/></td>
+                               
+                    
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td> <input type="password"
+                                id="txtpassword"
+                                name="password"
+                                required
+                                placeholder="enter password">
+                    </td>
+                                
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" id="rbtMale" name="gender">Male
+                        <input type="radio" id="rbtFemale" name="gender">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <textarea id="taAddress"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobbies</td>
+                    <td>
+                        <input type="checkbox" id="chkCycling"/>Cycling
+                        <input type="checkbox" id="chkTexting"/>Texting
+                        <input type="checkbox" id="chkTrecking"/>Trecking
+                        
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Company</td>
+                    <td>
+                        <select>
+                           <option selected>Select Country</option>
+                           <optgroup label="First Choice"/>
+                            <option value="In">India</option>
+                            <option value="UA">USA</option>
+                            <option value="Jp">Japan</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" id="txtemail" required placeholder="enter email id"/></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td><input type="date" id="dob"/></td>
+                </tr>
+                <tr>
+                    <td>Number</td>
+                    <td><input type="text" min="5" max="10"
+                    step="0.5"
+                    id="mynumber" onFocus="chkpassword" onKeyPress="return numbersonly(event)"/></td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td><input type="color"/></td>
+                </tr>
+                <tr>
+                    <td>Select File Upload
+                    <td><input type="file"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        Enter zip code
+                    </td>
+                    <td>
+                        <input type="text" name="zip"
+                        pattern="\d{6}"
+                        title="6 digits required"/>
+                        
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                <input type="submit" value="LOGIN" align="left">
+                    </td>
+                    <td>
+                        <input type="Reset" value="Clear"/>
+                    </td>
+                </tr>
+               
+            </table>
+        </form>
+    </body>
+</html>

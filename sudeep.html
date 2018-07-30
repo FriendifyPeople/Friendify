@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<title>Sudeep Kumar Sahoo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--imp notw
+all ids have been given to the div just before the aCTUAL ONE
+-->
+
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Raleway", sans-serif;
+    }
+
+    /*    dropdown towards left*/
+
+    .drop-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    /*    designing activity*/
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #474e5d;
+        font-family: Helvetica, sans-serif;
+    }
+
+    /* The actual timeline (the vertical ruler) */
+
+    .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        z-index: 0;
+    }
+
+    /* The actual timeline (the vertical ruler) */
+
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: teal;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+    }
+
+    /* Container around content */
+
+    .container {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
+
+    /* The circles on the timeline */
+
+    .container::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -17px;
+        background-color: white;
+        border: 4px solid #FF9F55;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    /* Place the container to the left */
+
+    .left {
+        left: 0;
+    }
+
+    /* Place the container to the right */
+
+    .right {
+        left: 50%;
+    }
+
+    /* Add arrows to the left container (pointing right) */
+
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 0.8;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent teal;
+    }
+
+    /* Add arrows to the right container (pointing left) */
+
+    .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 0.8;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent teal transparent transparent;
+    }
+
+    /* Fix the circle for containers on the right side */
+
+    .right::after {
+        left: -16px;
+    }
+
+    /* The actual content */
+
+    .content {
+        padding: 20px 30px;
+        background-color: teal;
+        position: relative;
+        border-radius: 6px;
+        font-family: "Raleway", sans-serif;
+        color: white;
+    }
+
+    /*    gallery styling*/
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f1f1f1;
+        padding: 20px;
+        font-family: Arial;
+    }
+
+    /* Center website */
+
+    .main {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 50px;
+        word-break: break-all;
+    }
+
+    .row {
+        margin: 10px -16px;
+    }
+
+    /* Add padding BETWEEN each column */
+
+    .row,
+    .row>.column {
+        padding: 8px;
+    }
+
+    /* Create three equal columns that floats next to each other */
+
+    .column {
+        float: left;
+        width: 33.33%;
+        /* Hide all elements by default */
+    }
+
+    /* Clear floats after rows */
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Contentgallery */
+
+    .contentgallery {
+        background-color: white;
+        padding: 10px;
+    }
+
+</style>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+     <!-- Navbar -->
+    <nav style="z-index: 3">
+        <div class="w3-top">
+
+            <div class="w3-bar w3-theme-d2 w3-left-align">
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+                <a href="home%20(2).html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Friendify</a>
+                <a href="sudeep.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
+
+                <div class="w3-dropdown-hover w3-hide-small" style="z-index: 3">
+                    <button class="w3-button" title="Notifications">Friends <i class="fa fa-caret-down"></i></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="z-index: 3">
+                        <a href="Soumya.html" class="w3-bar-item w3-button">Soumyabrata Majumder</a>
+                        <a href="Mannu.html" class="w3-bar-item w3-button">Mannu Sharma</a>
+                        <a href="Sachin.html" class="w3-bar-item w3-button">Sachin Baghel</a>
+                    </div>
+                </div>
+                <div class="w3-dropdown-hover w3-hide-small" style="z-index: 3">
+                    <button class="w3-button" title="Notifications">Notification<span class="w3-badge w3-right w3-small w3-teal">3</span></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="z-index: 3">
+                        <a href="#" class="w3-bar-item w3-button">New Friend request</a>
+                        <a href="#" class="w3-bar-item w3-button">Mannu liked your status</a>
+                        <a href="#" class="w3-bar-item w3-button">Sachin commented on your photo</a>
+                    </div>
+                </div>
+
+
+                <div class="w3-dropdown-hover w3-hide-small " style="float: right;">
+                    <button class="w3-button" title="Notifications"><i class="fa fa-cog"></i></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block drop-content">
+                        <a href="our.html" class="w3-bar-item w3-button">About us</a>
+                        <a href="#" class="w3-bar-item w3-button">Logout</a>
+                    </div>
+                </div>
+                <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>-->
+            </div>
+        </div>
+
+    </nav>
+    <!--end of nav bar-->
+
+    <div>
+        <!-- Sidebar/menu -->
+        <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:0;width:300px;" id="mySidebar"><br>
+            <div class="w3-container">
+                <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+                <img src="sudeep2.jpg" style="width:45%;" class="w3-round"><br><br>
+                <h4><b>Sudeep Kumar Sahoo</b></h4>
+                <p class="w3-text-grey">Engineer</p>
+            </div>
+
+            <div class="w3-bar-block">
+                <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
+       <span class="fa-stack fa-lg">
+  <i class="fa fa-circle-thin fa-stack-2x"></i>
+  <i class="fa fa-pencil fa-stack-1x"></i>
+</span> ABOUT</a>
+
+                <a href="#friends" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
+    <span class="fa-stack fa-lg">
+  <i class="fa fa-circle-thin fa-stack-2x"></i>
+  <i class="fa fa-user fa-stack-1x"></i>
+</span> FRIENDS</a>
+
+                <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><span class="fa-stack fa-lg">
+  <i class="fa fa-stack-2x"></i>
+  <i class="material-icons fa-stack-1x">collections</i>
+</span>GALLERY</a>
+
+                <!--   <a href="#pages" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><span class="fa-stack fa-lg">
+  <i class="fa fa-circle-thin fa-stack-2x"></i>
+  <i class="fa fa-book fa-stack-1x"></i>
+</span> PAGES LIKED</a> -->
+
+                <a href="#activity" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><span class="fa-stack fa-lg">
+  <i class="fa  fa-stack-2x"></i>
+  <i class="fa fa-bar-chart fa-stack-1x"></i>
+</span> ACTIVITY TIMELINE</a>
+
+            </div>
+
+        </nav>
+
+
+
+        <!-- !PAGE CONTENT! -->
+        <div class="w3-main" style="margin-left:300px; margin-top: 40px">
+
+            <!-- Header -->
+            <header id="portfolio">
+                <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+                <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+                <div class="w3-container">
+                    <h1 id="about"><b>Your Profile</b></h1>
+
+                </div>
+            </header>
+            <!--about-->
+            <div class="w3-row-padding">
+                <div class="w3-container w3-card w3-white">
+                    <h1>About us</h1>
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>C.V.RAMAN COLLEGE OF ENGINEERING</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016-2020</h6>
+                        <p>B.Tech</p>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>STUART SCIENCE COLLEGE</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014 - 2016</h6>
+                        <p>12th</p>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>CAMBRIDGE SCHOOL</b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014</h6>
+                        <p>10th</p><br>
+                    </div>
+                </div>
+
+                <br/>
+
+                <div class="w3-container w3-card w3-white">
+                    <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+                    <p>Web Tech</p>
+                    <div class="w3-light-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+                    </div>
+                    <p>Gaming</p>
+                    <div class="w3-light-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+                            <div class="w3-center w3-text-white">80%</div>
+                        </div>
+                    </div>
+                    <p>Coding</p>
+                    <div class="w3-light-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+                    </div>
+                    <p>Ghajini</p>
+                    <div class="w3-light-grey w3-round-xlarge w3-small">
+                        <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">100%</div>
+                    </div>
+                    <br>
+
+                    <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+                    <p>English</p>
+                    <p>Hindi</p>
+                    <p id="friends">Odia</p>
+                </div>
+                <!--end of skills-->
+            </div>
+            <!--end of about-->
+
+            <br/>
+
+            <div class="w3-row-padding">
+                <div class="w3-container w3-card w3-white">
+                    <h1>Friends</h1>
+                    <div class="w3-third w3-container w3-margin-bottom">
+                        <img src="sm1.jpg" alt="Soumyabrata" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>Soumyabrata</b></p>
+                        </div>
+                    </div>
+
+                    <div class="w3-third w3-container w3-margin-bottom">
+                        <img src="msk1.jpg" alt="Mannu Sharma" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>Mannu Sharma</b></p>
+                        </div>
+                    </div>
+
+                    <div class="w3-third w3-container">
+                        <img src="sb1.jpg" alt="Sachin Baghel" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p id="gallery"><b>Sachin Baghel</b></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br/>
+
+            <!--   gallery-->
+            <div class="w3-row-padding">
+                <div class="w3-card w3-container w3-white">
+
+
+                    <h2>MY GALLERY</h2>
+
+                    <!-- Portfolio Gallery Grid -->
+                    <div class="row">
+                        <div class="column nature">
+                            <div class="contentgallery">
+                                <img src="2%20(2).JPG" alt="Dj night" style="width:100%">
+                                <h4>Kshitij</h4>
+                                <p>DJ night</p>
+                            </div>
+                        </div>
+
+                        <div class="column cars">
+                            <div class="contentgallery">
+                                <img src="5.jpg" alt="nature" style="width:100%">
+                                <h4>Photoshoot</h4>
+                                <p>Jaydev Batika</p>
+                            </div>
+                        </div>
+
+                        <div class="column people">
+                            <div class="contentgallery">
+                                <img src="9.jpg" alt="Jail" style="width:100%">
+                                <h4>Jail theme restaurant</h4>
+                                <p>yohooo</p>
+                            </div>
+                        </div>
+                        <!-- END GRID -->
+                    </div>
+
+
+                </div>
+            </div>
+
+            <span id="activity"></span>
+            <br/>
+            <!--activity-->
+            <div class="w3-row-padding">
+                <div class="w3-card w3-container w3-white">
+                    <h1>Activity</h1>
+                    <div class="timeline">
+                        <div class="container left">
+                            <div class="content">
+                                <h2>18<sup>th</sup> March</h2>
+                                <p>Got your email verified</p>
+                            </div>
+                        </div>
+                        <div class="container right">
+                            <div class="content">
+                                <h2>17<sup>th</sup> March</h2>
+                                <p>Uploaded your first post</p>
+                            </div>
+                        </div>
+                        <div class="container left">
+                            <div class="content">
+                                <h2>14<sup>th</sup> March</h2>
+                                <p>Joined groups and liked some new Pages</p>
+                            </div>
+                        </div>
+                        <div class="container right">
+                            <div class="content">
+                                <h2>13<sup>th</sup> March</h2>
+                                <p>Made new friends</p>
+                            </div>
+                        </div>
+                        <div class="container left">
+                            <div class="content">
+                                <h2>12<sup>th</sup> March, 2018</h2>
+                                <p>Added Profile Picture</p>
+                            </div>
+                        </div>
+                        <div class="container right">
+                            <div class="content">
+                                <h2>12<sup>th</sup> March, 2018</h2>
+                                <p>Joined friendify</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--end of activity timeline-->
+
+            <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.google.com" title="friendify" target="_blank" class="w3-hover-opacity">Friendify.inc</a></div>
+
+            <!-- End page content -->
+        </div>
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+    </script>
+
+</body>
+
+</html>

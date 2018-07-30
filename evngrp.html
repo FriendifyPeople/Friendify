@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events and Groups</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+         /*    dropdown towards left*/
+
+    .drop-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+        
+        body, html {
+          height: 100%;
+          margin: 0;
+          font: 400 15px/1.8 "Lato", sans-serif;
+          color: #777;
+        }
+
+        .bgimg-1, .bgimg-2, .bgimg-3 {
+          position: relative;
+          opacity: 1;
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+        }
+        .bgimg-1 {
+          background-image: url("e1.jpg");
+          min-height: 100%;
+        }
+
+        .bgimg-2 {
+          background-image: url("e2.jpg");
+          min-height: 100%;
+        }
+        .caption {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 100%;
+          text-align: center;
+          color: #000;
+        }
+
+        .caption span.border {
+          background-color: #111;
+          color: #fff;
+          padding: 18px;
+          font-size: 25px;
+          letter-spacing: 10px;
+        }
+
+        h3 {
+          letter-spacing: 5px;
+          text-transform: uppercase;
+          font: 20px "Lato", sans-serif;
+          color: #111;
+        }
+
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1024px) {
+            .bgimg-1, .bgimg-2, .bgimg-3 {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav style="z-index: 3">
+        <div class="w3-top">
+
+            <div class="w3-bar w3-theme-d2 w3-left-align">
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+                <a href="home%20(2).html" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Friendify</a>
+                <a href="sudeep.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
+
+                <div class="w3-dropdown-hover w3-hide-small" style="z-index: 3">
+                    <button class="w3-button" title="Notifications">Friends <i class="fa fa-caret-down"></i></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="z-index: 3">
+                        <a href="Soumya.html" class="w3-bar-item w3-button">Soumyabrata Majumder</a>
+                        <a href="Mannu.html" class="w3-bar-item w3-button">Mannu Sharma</a>
+                        <a href="Sachin.html" class="w3-bar-item w3-button">Sachin Baghel</a>
+                    </div>
+                </div>
+                <div class="w3-dropdown-hover w3-hide-small" style="z-index: 3">
+                    <button class="w3-button" title="Notifications">Notification<span class="w3-badge w3-right w3-small w3-teal">3</span></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="z-index: 3">
+                        <a href="#" class="w3-bar-item w3-button">New Friend request</a>
+                        <a href="#" class="w3-bar-item w3-button">Mannu liked your status</a>
+                        <a href="#" class="w3-bar-item w3-button">Sachin commented on your photo</a>
+                    </div>
+                </div>
+
+
+                <div class="w3-dropdown-hover w3-hide-small " style="float: right;">
+                    <button class="w3-button" title="Notifications"><i class="fa fa-cog"></i></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block drop-content">
+                        <a href="our.html" class="w3-bar-item w3-button">About us</a>
+                        <a href="#" class="w3-bar-item w3-button">Logout</a>
+                    </div>
+                </div>
+                <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>-->
+            </div>
+        </div>
+
+    </nav>
+    <!--end of nav bar-->
+    
+    <!-- content of the page-->
+            <div class="bgimg-1"> 
+                  <div class="w3-row-padding" style="height: 50px">
+                </div> 
+             
+             
+              <!-- First Photo Grid-->
+              
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom w3-card">
+      <a href="http://celegance.cvrgi.edu.in/inter-music-events.html"><img src="e2.1.jpg" alt="bodj" style="width:100%" class="w3-card"></a>
+      <div class="w3-container w3-white">
+        <p><b>BATTLE OF DJ'S</b></p>
+        <p>The clash of DJ's<br></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom w3-card">
+      <img src="e2.2.jpg" alt="bob" style="width:100%" class="w3-card">
+      <div class="w3-container w3-white">
+        <p><b>BATTLE OF BANDS</b></p>
+        <p>The war for the best band.<br></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom w3-card">
+      <img src="e2.3.jpg" alt="Sangam" style="width:100%" class="w3-card">
+      <div class="w3-container w3-white">
+        <p><b>SANGAM</b></p>
+        <p>The best thing about music is that when it hits you, you don't feel any pain.</p>
+      </div>
+    </div>
+  </div>
+    <div style="height: 75px"></div>
+        </div>
+
+        <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+          <h3 style="text-align:center;">Welcome to events and group section</h3>
+          <p style="text-align:center;">The upper section consists of the events available and the lower section consists of the groups.</p>
+        </div>
+        <div class="bgimg-2">
+      <!-- First Photo Grid-->
+              <div style="height:70px"></div>
+<div class="w3-container">
+    <div class="w3-row w3-container w3-margin-bottom w3-card w3-half">
+        <a href="grp1.html">     
+       <img src="w1.jpg" alt="Norway" style="width:100%" class="w3-card">
+        </a>
+      <div class="w3-container w3-white">
+        <p><b>GLB Official</b></p>
+        <p>Closed group for moive sharing<br></p>
+      </div>
+    </div>
+    <div class="w3-row w3-container w3-margin-bottom w3-card w3-half">     
+       <img src="w1.jpg" alt="Norway" style="width:100%" class="w3-card">
+      <div class="w3-container w3-white">
+        <p><b>BATTLE OF DJ'S</b></p>
+        <p>The clash of DJ's<br></p>
+      </div>
+    </div>
+  </div>
+    
+        </div>
+</body>
+</html>
